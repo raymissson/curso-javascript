@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>
+            Curso JavaScript Parte 2
+        </title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input onkeypress="mostraAlerta()"/>
+            <button onmouseover="mostraAlerta()">Me aperta</button>
+        </div>
+        <br>
+        <div id="app2">
+                <input type="text" id="nome" name="nome" class="nome"/>
+                <button class="botao">Me aperta</button>
+        </div>
+        <br>
+        <div id="app3">
+        </div>
+        <script>
+            function mostraAlerta(){
+                alert('Botão foi clicado');
+            }
+            // retorna única elemento
+            var inputElement = document.getElementById('nome');
+            console.log(inputElement);
+            // sempre retorna vetor
+            var inputElement = document.getElementsByTagName('nome');
+            console.log(inputElement);
+
+            var inputElement = document.getElementsByClassName('nome');
+            console.log(inputElement);
+            // percorre o DOM
+            var inputElement = document.querySelector('div#app input');
+            // usando funcoes de elementos com js
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function(){
+                var text = inputElement.value;
+                alert(text);
+            }
+
+            var inputElement = document.querySelector('input[name=nome]');
+
+            // criar elementos hmtl através de js
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href','https://github.com/raymissson');
+
+            var textElement = document.createTextNode('Acessar GITHUB');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app3');
+            containerElement.appendChild(linkElement);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>
+            Curso JavaScript
+        </title>
+    </head>
+    <body>
+        <!-- here javascript -->
+        <script>
+            // variáveis recebendo seus tipos
+            var nome = "raymison";
+            var idade = 23;
+            var peso = 85.5;
+            var humamo = true;
+            // varável recebendo uma lista
+            var alunos = ['Raymison', 'Asthon', 'Maklouf'];
+            // variável recebendo objeto
+            var aluno = {
+                nome: "raymison",
+                idade: 23,
+                peso: 85.5,
+                humamo: true
+             };
+
+            console.log(alunos);
+
+            console.log(aluno.nome, aluno.idade);
+
+            // calculo simples
+            var x = 10, y= 5;
+
+            console.log(y,x);
+            
+            var resultado = y + x;
+            console.log(resultado);
+
+            //funções
+
+            function soma(num1, num2){
+                var result = num1 + num2;
+                return result;
+            }
+
+            var resultado = soma(1,2);
+            console.log(resultado);
+
+            // condicionais
+            function retornaSexoIf(sexo){
+                if(sexo==='M' || sexo ==='m'){
+                    return 'Masculino';
+                }else if(sexo==='F'|| sexo ==='f'){
+                    return 'Feminino';
+                }else{
+                    return 'outros';
+                }
+            }
+
+            function retornaSexoSwitch(sexo){
+                switch(sexo){
+                    case 'M':
+                        return 'Masculino';
+                    case 'm':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    case 'f':
+                        return 'Feminino';
+                    default:
+                        return 'outros'
+                }
+            }
+
+            var resultado = retornaSexoIf('f');
+            console.log(resultado);
+
+            var resultado = retornaSexoSwitch('add');
+            console.log(resultado);
+
+            // operadores lógicos
+            var sexo = 'M', idade = 23;
+            if(sexo ==='M' && idade>=18){
+                console.log('OK');
+            }
+            var sexo = 'g', idade = 23;
+            if(sexo !=='M'){
+                console.log('ERRO');
+            }
+            //condição ternária
+            var retorno = (sexo === 'M') ? 'Masculino': (sexo === 'F') ? 'Feminino': 'outros';
+            console.log(retorno);
+
+            // estrutura de repetição
+            for(var i=0; i<= 100; i++){
+                console.log(i);
+            }
+            var j = 0;
+
+            while(j <= 100){
+                console.log(j);
+                j++;
+            }
+
+            // intervalos e timeout
+            function exibeAlgo(){
+                console.log('Hello World')
+            }
+            // executa essa função a cada 1 segundo
+            setInterval(exibeAlgo, 1000);
+            // executa essa função com um tempo determinado uma única vez
+            setTimeout(exibeAlgo, 2000);
+        </script>
+    </body>
+</html>
